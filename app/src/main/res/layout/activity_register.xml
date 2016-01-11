@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:whatever="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:background="#2D3238">
+
+        <!-- Registration Form -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip">
+
+            <com.andreabaccega.widget.FormEditText
+                android:id="@+id/editTextName"
+                whatever:testType="personName"
+                whatever:emptyErrorString="Ime ne smije biti prazno"
+                whatever:testErrorString="Ime nije valjano"
+                style="@style/GreyEditText"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:hint="Ime"
+                />
+            <com.andreabaccega.widget.FormEditText
+                android:id="@+id/editTextLastName"
+                whatever:testType="personName"
+                whatever:emptyErrorString="Prezime ne smije biti prazno"
+                whatever:testErrorString="Prezime nije valjano"
+                style="@style/GreyEditText"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:hint="Prezime"
+                />
+            <com.andreabaccega.widget.FormEditText
+                android:id="@+id/editTextUserName"
+                whatever:testType="alphaNumeric"
+                whatever:emptyErrorString="Korisničko ime ne smije biti prazno"
+                whatever:testErrorString="Korisničko ime nije valjano"
+                style="@style/GreyEditText"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:hint="Korisničko ime"
+                />
+            <com.andreabaccega.widget.FormEditText
+                android:id="@+id/editTextPassword"
+                whatever:testType="alphaNumeric"
+                whatever:emptyErrorString="Lozinka ne smije biti prazna"
+                whatever:testErrorString="Lozinka nije valjana"
+                style="@style/GreyEditText"
+                android:password="true"
+                android:layout_marginTop="5dip"
+                android:hint="Lozinka"
+                android:layout_marginBottom="20dip" />
+            <!-- Register Button -->
+            <com.dd.processbutton.iml.ActionProcessButton
+                android:id="@+id/btnRegister"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Registriraj se"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                custom:pb_colorComplete="@color/green_complete"
+                custom:pb_colorNormal="@color/blue_normal"
+                custom:pb_colorPressed="@color/blue_pressed"
+                custom:pb_colorProgress="@color/purple_progress"
+                custom:pb_textComplete="Success"
+                custom:pb_textProgress="Loading"
+                custom:pb_textError="Error"
+                custom:pb_colorError="@color/red_error"
+                android:onClick="onClickRegister"/>
+            <!-- Link to Login Screen -->
+            <TextView android:id="@+id/link_to_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dip"
+                android:layout_marginBottom="40dip"
+                android:text="Već si član! Prijavi se ovdje"
+                android:gravity="center"
+                android:textSize="15dip"
+                android:textColor="#ffffff"/>
+
+        </LinearLayout>
+        <!-- Registration Form Ends -->
+    </RelativeLayout>
+</ScrollView>
